@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+ <header class="zenith-navbar">
+    <div class="navbar-container">
+      <!-- Logo (Always visible) -->
+      <a href="/" class="logo">
+        <img src="assets/images/zenith-logo.webp" alt="Zenith Logo" class="logo-img">
+      </a>
+      <!-- Mobile Menu Toggle -->
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+        <!-- Hamburger Icon -->
+        <svg class="icon icon-hamburger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+        <!-- Close Icon -->
+        <svg class="icon icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <nav id="main-menu" class="main-menu">
+        <a href="/" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="verticals.html" class="nav-link">Our Verticals</a>
+        <a href="awards.html" class="nav-link">Awards & Accolades</a>
+        <a href="location.html" class="nav-link">Locations</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+        <a href="csr.html" class="nav-link">CSR</a>
+      </nav>
+    </div>
+  </header>
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainMenu = document.getElementById('main-menu');
+    const hamburger = document.querySelector('.icon-hamburger');
+    const closeIcon = document.querySelector('.icon-close');
+
+    menuToggle.addEventListener('click', () => {
+      mainMenu.classList.toggle('open');
+      hamburger.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // Mobile dropdown toggle
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+
+    dropdownToggle.addEventListener('click', (e) => {
+      if (window.innerWidth < 1024) {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+      }
+    });
+  </script>
+  <section class="hero text-center" style="background-image: url('./assets/images/contactUscopy.jpg');">
+    <div class="container">
+      <h1 class="hero__title">Contact Us</h1>
+      <p class="hero__subtitle">We're Here to Assist You with All Your Queries</p>
+    </div>
+  </section>
+
+  <!-- Contact section with form on left and text on right -->
+  <section class="py-2">
+    <div class="container contact-section">
+      <div class="row gx-5">
+        <!-- Left: Contact Form -->
+        <div class="col-md-6">
+          <div class="card shadow">
+            <div class="card-body p-4">
+              <h2 class="card-title mb-4 text-center">Contact Us</h2>
+              <form id="contactForm" novalidate>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="name" placeholder="Name" />
+                  <label for="name">Name</label>
+                  <div id="nameError" class="error-text">
+                    Please enter your name
+                  </div>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="email" placeholder="Email" />
+                  <label for="email">Email</label>
+                  <div id="emailError" class="error-text">
+                    Please enter a valid email
+                  </div>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <textarea class="form-control" placeholder="Message" id="message" style="height: 120px"></textarea>
+                  <label for="message">Message</label>
+                  <div id="messageError" class="error-text">
+                    Please enter a message
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Some Text -->
+
+        <div class="col-12 col-md-6 d-flex align-items-center mb-4 mb-md-0">
+          <div class="contact-text p-4 bg-white rounded-4 shadow-sm position-relative w-100"
+            style="border-left: 6px solid #2575fc">
+            <h2 class="fw-bold mb-3 border-bottom pb-2" style="border-color: #2575fc; display: inline-block">
+              Get In Touch
+            </h2>
+
+            <p class="d-flex align-items-start align-items-md-center mb-3" style="font-size: 1rem; color: #333">
+              <span class="badge bg-primary me-3 rounded-circle p-2">
+                <i class="bi bi-question-circle-fill"></i>
+              </span>
+              <span>Have questions or want to learn more about our services? Our
+                team is ready to assist you.</span>
+            </p>
+
+            <p class="d-flex align-items-start align-items-md-center mb-3" style="font-size: 1rem; color: #333">
+              <span class="badge bg-primary me-3 rounded-circle p-2">
+                <i class="bi bi-star-fill"></i>
+              </span>
+              <span>We pride ourselves on exceptional hospitality and look forward
+                to making your experience unforgettable.</span>
+            </p>
+
+            <p class="d-flex align-items-start align-items-md-center mb-4" style="font-size: 1rem; color: #333">
+              <span class="badge bg-primary me-3 rounded-circle p-2">
+                <i class="bi bi-telephone-fill"></i>
+              </span>
+              <span>Call us at <strong>+91 9876543210</strong> or email
+                <strong>contact@zenithhospitality.com</strong>.</span>
+            </p>
+
+            <a href="mailto:contact@zenithhospitality.com" class="btn btn-outline-primary fw-semibold px-4"
+              style="transition: all 0.3s ease">
+              Contact Now <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <div class="container text-md-left">
+      <div class="row text-md-left">
+        <!-- About -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <img height="55px" width="95px" src="./assets/images/zenith-logo.webp" alt="" srcset="">
+          <p>
+            Zenith Leisure Holidays Ltd, founded in the year 1997 is one of India's leading travel companies that offers
+            hassle-free holiday experience, taking care of all your travel needs.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+            Quick Links
+          </h5>
+          <p>
+            <a href="#" class="text-white" style="text-decoration: none">Home</a>
+          </p>
+          <p>
+            <a href="AboutUs.html" class="text-white" style="text-decoration: none">About</a>
+          </p>
+          <p>
+            <a href="verticals.html" class="text-white" style="text-decoration: none">Services</a>
+          </p>
+          <p>
+            <a href="ContactUS.html" class="text-white" style="text-decoration: none">Contact</a>
+          </p>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+            Contact
+          </h5>
+          <p><i class="bi bi-house-door-fill me-2"></i> Noida, India</p>
+          <p><i class="bi bi-envelope-fill me-2"></i>web@zenithholidays.com</p>
+          <p><i class="bi bi-telephone-fill me-2"></i> +91 9240233200</p>
+        </div>
+
+        <!-- Social -->
+        <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+            Follow us
+          </h5>
+          <a href="https://www.facebook.com/zenithleisureholidays/" class="text-white me-4"><i
+              class="bi bi-facebook"></i></a>
+          <a href="https://twitter.com/zenitholidays" class="text-white me-4"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.instagram.com/zenithleisureholidays/" class="text-white me-4"><i
+              class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/zenith-leisure-holidays-pvt-ltd/" class="text-white me-4"><i
+              class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <hr class="mb-4" />
+
+      <!-- Bottom Line -->
+      <div class="row align-items-center">
+        <div class="col-md-7 col-lg-8">
+          <p class="text-white">Copyright © 2024 Zenithholidays.com All Rights Reserved</p>
+        </div>
+        <div class="col-md-5 col-lg-4">
+          <!-- <p class="text-white text-end">Designed by You</p> -->
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./assets/js/scrollnav.js"></script>
+  <!-- Validation Script -->
+  <script src="./assets/js/formValidate.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

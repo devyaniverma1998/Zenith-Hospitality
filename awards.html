@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Awards & Accolades</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+  <header class="zenith-navbar">
+    <div class="navbar-container">
+      <!-- Logo (Always visible) -->
+      <a href="/" class="logo">
+        <img src="assets/images/zenith-logo.webp" alt="Zenith Logo" class="logo-img">
+      </a>
+      <!-- Mobile Menu Toggle -->
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+        <!-- Hamburger Icon -->
+        <svg class="icon icon-hamburger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+        <!-- Close Icon -->
+        <svg class="icon icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <nav id="main-menu" class="main-menu">
+        <a href="/" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="verticals.html" class="nav-link">Our Verticals</a>
+        <a href="awards.html" class="nav-link">Awards & Accolades</a>
+        <a href="location.html" class="nav-link">Locations</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+        <a href="csr.html" class="nav-link">CSR</a>
+      </nav>
+    </div>
+  </header>
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainMenu = document.getElementById('main-menu');
+    const hamburger = document.querySelector('.icon-hamburger');
+    const closeIcon = document.querySelector('.icon-close');
+
+    menuToggle.addEventListener('click', () => {
+      mainMenu.classList.toggle('open');
+      hamburger.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // Mobile dropdown toggle
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+
+    dropdownToggle.addEventListener('click', (e) => {
+      if (window.innerWidth < 1024) {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+      }
+    });
+  </script>
+
+  <!-- Hero Section -->
+  <section class="hero text-center" style="background-image: url('./assets/images/award.jpg');">
+    <div class="container">
+      <h1 class="hero__title">Awards & Accolades</h1>
+      <p class="hero__subtitle">Celebrating Excellence in Hospitality</p>
+    </div>
+  </section>
+
+  <section class=" py-3 position-relative overflow-hidden">
+    <div class="position-absolute top-0 end-0"
+      style="width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,123,255,0.15) 0%, transparent 70%); border-radius: 50%; transform: translate(40%, -40%);">
+    </div>
+    <div class="position-absolute bottom-0 start-0"
+      style="width: 600px; height: 600px; background: radial-gradient(circle, rgba(111,66,193,0.15) 0%, transparent 70%); border-radius: 50%; transform: translate(-40%, 40%);">
+    </div>
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-black"
+          style="text-transform: uppercase; text-shadow: 0 4px 15px rgba(0,0,0,0.3); position: relative;">
+          Awards & <span class="text-primary">Recognition</span>
+          <span
+            style="display: block; width: 100px; height: 4px; background: black; margin: 20px auto 0; border-radius: 2px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);"></span>
+        </h2>
+        <p class="text-muted">Celebrating excellence in travel and forex services</p>
+
+      </div>
+
+      <div class="row g-4 g-lg-5 justify-content-center">
+        <!-- Award 1: Certificate of Appreciation -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="award-card h-100 rounded shadow-sm overflow-hidden bg-white position-relative">
+            <img src="assets/images/award-1.png" alt="Certificate of Appreciation - Best Partner 2024"
+              class="img-fluid w-100" style="height: 250px; object-fit: cover;" />
+            <div class="award-caption p-3 text-center bg-white">
+              <h5 class="fw-bold mb-1">Certificate of Appreciation</h5>
+              <p class="small text-muted mb-0">Best Partner 2024 – Regional Director, India & SAARC</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Award 2: Dubai MICE Star Awards -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="award-card h-100 rounded shadow-sm overflow-hidden bg-white position-relative">
+            <img src="assets/images/award-2.png" alt="Dubai MICE Star Awards 2024 - Gold Winner" class="img-fluid w-100"
+              style="height: 250px; object-fit: cover;" />
+            <div class="award-caption p-3 text-center bg-white">
+              <h5 class="fw-bold mb-1">Dubai MICE Star Awards</h5>
+              <p class="small text-muted mb-0">Gold Winner 2024</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Award 3: Team Recognition -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="award-card h-100 rounded shadow-sm overflow-hidden bg-white position-relative">
+            <img src="assets/images/award-3.png" alt="Team receiving recognition award" class="img-fluid w-100"
+              style="height: 250px; object-fit: cover;" />
+            <div class="award-caption p-3 text-center bg-white">
+              <h5 class="fw-bold mb-1">Team Excellence Award</h5>
+              <p class="small text-muted mb-0">Recognized for outstanding performance</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Award 4: Malaysia Tourism Award -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="award-card h-100 rounded shadow-sm overflow-hidden bg-white position-relative">
+            <img src="assets/images/award-4.png" alt="Malaysia Tourism Board Recognition" class="img-fluid w-100"
+              style="height: 250px; object-fit: cover;" />
+            <div class="award-caption p-3 text-center bg-white">
+              <h5 class="fw-bold mb-1">Malaysia Tourism Recognition</h5>
+              <p class="small text-muted mb-0">Top Performing Partner – India Market</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <div class="container text-md-left">
+      <div class="row text-md-left">
+        <!-- About -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <img height="55px" width="95px" src="./assets/images/zenith-logo.webp" alt="" srcset="">
+          <p>
+            Zenith Leisure Holidays Ltd, founded in the year 1997 is one of India's leading travel companies that offers
+            hassle-free holiday experience, taking care of all your travel needs.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+            Quick Links
+          </h5>
+          <p>
+            <a href="#" class="text-white" style="text-decoration: none">Home</a>
+          </p>
+          <p>
+            <a href="about.html" class="text-white" style="text-decoration: none">About</a>
+          </p>
+          <p>
+            <a href="verticals.html" class="text-white" style="text-decoration: none">Services</a>
+          </p>
+          <p>
+            <a href="contact.html" class="text-white" style="text-decoration: none">Contact</a>
+          </p>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+            Contact
+          </h5>
+          <p><i class="bi bi-house-door-fill me-2"></i> Noida, India</p>
+          <p><i class="bi bi-envelope-fill me-2"></i>web@zenithholidays.com</p>
+          <p><i class="bi bi-telephone-fill me-2"></i> +91 9240233200</p>
+        </div>
+
+        <!-- Social -->
+        <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+            Follow us
+          </h5>
+          <a href="https://www.facebook.com/zenithleisureholidays/" class="text-white me-4"><i
+              class="bi bi-facebook"></i></a>
+          <a href="https://twitter.com/zenitholidays" class="text-white me-4"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.instagram.com/zenithleisureholidays/" class="text-white me-4"><i
+              class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/zenith-leisure-holidays-pvt-ltd/" class="text-white me-4"><i
+              class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <hr class="mb-4" />
+
+      <!-- Bottom Line -->
+      <div class="row align-items-center">
+        <div class="col-md-7 col-lg-8">
+          <p class="text-white">Copyright © 2024 Zenithholidays.com All Rights Reserved</p>
+        </div>
+        <div class="col-md-5 col-lg-4">
+          <!-- <p class="text-white text-end">Designed by You</p> -->
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/scrollnav.js"></script>
+</body>
+
+</html>

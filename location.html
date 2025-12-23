@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Zenith Location</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/geodata/indiaLow.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+</head>
+
+<body>
+  <header class="zenith-navbar">
+    <div class="navbar-container">
+      <!-- Logo (Always visible) -->
+      <a href="/" class="logo">
+        <img src="assets/images/zenith-logo.webp" alt="Zenith Logo" class="logo-img">
+      </a>
+      <!-- Mobile Menu Toggle -->
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+        <!-- Hamburger Icon -->
+        <svg class="icon icon-hamburger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+        <!-- Close Icon -->
+        <svg class="icon icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <nav id="main-menu" class="main-menu">
+        <a href="/" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="verticals.html" class="nav-link">Our Verticals</a>
+        <a href="awards.html" class="nav-link">Awards & Accolades</a>
+        <a href="location.html" class="nav-link">Locations</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+        <a href="csr.html" class="nav-link">CSR</a>
+      </nav>
+    </div>
+  </header>
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainMenu = document.getElementById('main-menu');
+    const hamburger = document.querySelector('.icon-hamburger');
+    const closeIcon = document.querySelector('.icon-close');
+
+    menuToggle.addEventListener('click', () => {
+      mainMenu.classList.toggle('open');
+      hamburger.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // Mobile dropdown toggle
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+
+    dropdownToggle.addEventListener('click', (e) => {
+      if (window.innerWidth < 1024) {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+      }
+    });
+  </script>
+
+
+
+  <section class="hero text-center" style="background-image: url('./assets/images/location.jpg');">
+    <div class="container">
+      <h1 class="hero__title">Our Locations</h1>
+      <p class="hero__subtitle">Discover Zenith Holidays Forex Branches Across India</p>
+
+    </div>
+  </section>
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold text-black"
+        style="text-transform: uppercase; text-shadow: 0 4px 15px rgba(0,0,0,0.3); position: relative;">
+        Explore <span class="text-primary">Our Locations</span>
+        <span
+          style="display: block; width: 100px; height: 4px; background: black; margin: 20px auto 0; border-radius: 2px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);"></span>
+      </h2>
+    </div>
+
+    <!-- Location List & Map -->
+    <div class="container py-1">
+      <div class="row g-5">
+        <!-- Location List Sidebar -->
+        <div class="col-lg-4">
+          <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+              <h6 class="card-title text-primary mb-4">
+                <strong>Head Office:</strong><span class="text-black"> Kolkata, West Bengal 700019</span>
+              </h6>
+              <h6 class="text-dark mb-3"><strong>Our Branches:</strong></h6>
+
+              <div class="location-list-wrapper" style="max-height: 500px; overflow-y: auto;">
+                <ul class="location-list list-unstyled m-0">
+                  <li class="location-item" data-city="Ahmedabad">Ahmedabad</li>
+                  <li class="location-item" data-city="Amritsar">Amritsar</li>
+                  <li class="location-item" data-city="Anand">Anand</li>
+                  <li class="location-item" data-city="Bangalore">Bangalore</li>
+                  <li class="location-item" data-city="Batala">Batala</li>
+                  <li class="location-item" data-city="Bhubaneswar">Bhubaneswar</li>
+                  <li class="location-item" data-city="Chandigarh">Chandigarh</li>
+                  <li class="location-item" data-city="Chennai">Chennai</li>
+                  <li class="location-item" data-city="Coimbatore">Coimbatore</li>
+                  <li class="location-item" data-city="Delhi">Delhi</li>
+                  <li class="location-item" data-city="Goa">Goa</li>
+                  <li class="location-item" data-city="Guwahati">Guwahati</li>
+                  <li class="location-item" data-city="Hyderabad">Hyderabad</li>
+                  <li class="location-item" data-city="Indore">Indore</li>
+                  <li class="location-item" data-city="Jaipur">Jaipur</li>
+                  <li class="location-item" data-city="Jalandhar">Jalandhar</li>
+                  <li class="location-item active" data-city="Kolkata">Kolkata</li>
+                  <li class="location-item" data-city="Karnal">Karnal</li>
+                  <li class="location-item" data-city="Lucknow">Lucknow</li>
+                  <li class="location-item" data-city="Ludhiana">Ludhiana</li>
+                  <li class="location-item" data-city="Mumbai">Mumbai</li>
+                  <li class="location-item" data-city="Noida Sector 18">Noida - Sec 18</li>
+                  <li class="location-item" data-city="Noida Sector 59">Noida - Sec 59</li>
+                  <li class="location-item" data-city="Patna">Patna</li>
+                  <li class="location-item" data-city="Pune">Pune</li>
+                  <li class="location-item" data-city="Rajkot">Rajkot</li>
+                  <li class="location-item" data-city="Ranchi">Ranchi</li>
+                  <li class="location-item" data-city="Rudrapur">Rudrapur</li>
+                  <li class="location-item" data-city="Siliguri">Siliguri</li>
+                  <li class="location-item" data-city="Surat">Surat</li>
+                  <li class="location-item" data-city="Thane">Thane</li>
+                  <li class="location-item" data-city="Vadodara">Vadodara</li>
+                  <li class="location-item" data-city="Vijayawada">Vijayawada</li>
+                  <li class="location-item" data-city="Visakhapatnam">Visakhapatnam</li>
+                  <li class="location-item" data-city="Warangal">Warangal</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="col-lg-8">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body p-0">
+              <div id="indiaMap" style="width: 100%; height: 650px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <style>
+    /* Enhanced location list styling */
+    .location-list-wrapper::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .location-list-wrapper::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .location-list-wrapper::-webkit-scrollbar-thumb {
+      background: #c0c0c0;
+      border-radius: 10px;
+    }
+
+    .location-item {
+      padding: 12px 20px;
+      margin-bottom: 4px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      background-color: #f8f9fa;
+      border-left: 4px solid transparent;
+    }
+
+    .location-item:hover {
+      background-color: #e9ecef;
+      transform: translateX(8px);
+    }
+
+    .location-item.active {
+      background: linear-gradient(90deg, #0d6efd, #0d5bfd);
+      color: white;
+      font-weight: 600;
+      border-left: 4px solid #ffffff;
+      box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      #indiaMap {
+        height: 400px !important;
+      }
+
+      .location-list-wrapper {
+        max-height: 300px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #indiaMap {
+        height: 300px !important;
+      }
+    }
+  </style>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+
+  <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <div class="container text-md-left">
+      <div class="row text-md-left">
+        <!-- About -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <img height="55px" width="95px" src="./assets/images/zenith-logo.webp" alt="" srcset="">
+          <p>
+            Zenith Leisure Holidays Ltd, founded in the year 1997 is one of India's leading travel companies that offers
+            hassle-free holiday experience, taking care of all your travel needs.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
+          <p><a href="#" class="text-white" style="text-decoration: none">Home</a></p>
+          <a href="about.html" class="text-white" style="text-decoration: none">About</a>
+          </p>
+          <p>
+            <a href="verticals.html" class="text-white" style="text-decoration: none">Services</a>
+          </p>
+          <p>
+            <a href="contact.html" class="text-white" style="text-decoration: none">Contact</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+          <p><i class="bi bi-house-door-fill me-2"></i> Noida, India</p>
+          <p><i class="bi bi-envelope-fill me-2"></i>web@zenithholidays.com</p>
+          <p><i class="bi bi-telephone-fill me-2"></i> +91 9240233200</p>
+        </div>
+
+        <!-- Social -->
+        <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Follow us</h5>
+          <a href="https://www.facebook.com/zenithleisureholidays/" class="text-white me-4"><i
+              class="bi bi-facebook"></i></a>
+          <a href="https://twitter.com/zenitholidays" class="text-white me-4"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.instagram.com/zenithleisureholidays/" class="text-white me-4"><i
+              class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/zenith-leisure-holidays-pvt-ltd/" class="text-white me-4"><i
+              class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <hr class="mb-4" />
+
+      <!-- Bottom Line -->
+      <div class="row align-items-center">
+        <div class="col-md-7 col-lg-8">
+          <p class="text-white">Copyright © 2024 Zenithholidays.com All Rights Reserved</p>
+        </div>
+        <div class="col-md-5 col-lg-4">
+          <!-- <p class="text-white text-end">Designed by You</p> -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/map.js"></script>
+  <script src="./assets/js/scrollnav.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
