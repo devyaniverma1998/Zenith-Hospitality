@@ -306,272 +306,159 @@
     </div>
   </section>
 
-
-
-
-  <section class="testi-section position-relative overflow-hidden">
+  <section class="testi-section py-5 position-relative overflow-hidden bg-light">
+    <!-- Decorative Background Circles -->
     <div class="position-absolute top-0 end-0"
-      style="width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,123,255,0.15) 0%, transparent 70%); border-radius: 50%; transform: translate(40%, -40%);">
+      style="width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,123,255,0.1) 0%, transparent 70%); border-radius: 50%; transform: translate(40%, -40%);">
     </div>
     <div class="position-absolute bottom-0 start-0"
-      style="width: 600px; height: 600px; background: radial-gradient(circle, rgba(111,66,193,0.15) 0%, transparent 70%); border-radius: 50%; transform: translate(-40%, 40%);">
+      style="width: 600px; height: 600px; background: radial-gradient(circle, rgba(111,66,193,0.1) 0%, transparent 70%); border-radius: 50%; transform: translate(-50%, 50%);">
     </div>
-    <div class="testimonial-wrapper">
 
-      <h2 class="text-center  fw-bold text-black"
-        style="text-transform: uppercase;   text-shadow: 0 4px 15px rgba(0,0,0,0.3); position: relative;  ">
-        What Our Customer Say
-        <span
-          style=" display: block; width: 100px; height: 4px;background: black; margin: 20px auto 0; border-radius: 2px; box-shadow: 0 2px 10px rgba(255,255,255,0.5);"></span>
-      </h2>
-      <div class="testimonial-container pt-5">
-        <div class="testimonial-grid pt-2">
-          <div class="image-container" id="image-container"></div>
-          <div class="testimonial-content" id="testimonial-content">
-            <div>
-              <h3 class="name mb-2" id="name"></h3>
-              <p class="designation" id="designation"></p>
-              <p class="quote" id="quote"></p>
-            </div>
-            <div class="arrow-buttons">
-              <button class="arrow-button prev-button" id="prev-button">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-                </svg>
-              </button>
-              <button class="arrow-button next-button" id="next-button">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                </svg>
-              </button>
+    <div class="container position-relative">
+      <!-- Section Title -->
+      <div class="text-center mb-5">
+        <h2 class="text-center  fw-bold text-black"
+          style="text-transform: uppercase;   text-shadow: 0 4px 15px rgba(0,0,0,0.3); position: relative;  ">
+          What Our <span class="text-primary">Customer Say</span>
+          <span
+            style=" display: block; width: 100px; height: 4px;background: black; margin: 20px auto 0; border-radius: 2px; box-shadow: 0 2px 10px rgba(255,255,255,0.5);"></span>
+        </h2>
+        
+      </div>
+
+      <!-- Testimonial Carousel - 2 Slides at a Time -->
+      <div id="testimonialCarouselMulti" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
+
+        <!-- Indicators (optional - we show 3 dots for 5 items) -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#testimonialCarouselMulti" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#testimonialCarouselMulti" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#testimonialCarouselMulti" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+          <!-- Slide 1: Testimonials 1 & 2 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+
+              <!-- Testimonial 1 -->
+              <div class="col-lg-6 col-md-8 mb-4">
+                <div class="d-flex flex-column flex-md-row align-items-center bg-white p-4 rounded-4 shadow-sm h-100">
+                  <img src="assets/images/PriyaSharma.jpg" alt="Priya Sharma"
+                    class="rounded-circle shadow flex-shrink-0 mb-3 mb-md-0 me-md-4"
+                    style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #fff;">
+                  <div class="text-center text-md-start">
+                    <p class="quote fst-italic text-muted mb-3">
+                      "Absolutely loved the booking experience! The flight deals were amazing... We'll book again soon!"
+                    </p>
+                    <h5 class="name fw-bold mb-1">Priya Sharma</h5>
+                    <p class="designation text-primary mb-0">Noida, Uttar Pradesh</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 2 -->
+              <div class="col-lg-6 col-md-8 mb-4">
+                <div class="d-flex flex-column flex-md-row align-items-center bg-white p-4 rounded-4 shadow-sm h-100">
+                  <img src="assets/images/AmitPatel.jpg" alt="Amit Patel"
+                    class="rounded-circle shadow flex-shrink-0 mb-3 mb-md-0 me-md-4"
+                    style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #fff;">
+                  <div class="text-center text-md-start">
+                    <p class="quote fst-italic text-muted mb-3">
+                      "Fantastic travel services! The forex rates were the best... Highly recommend for family
+                      vacations!"
+                    </p>
+                    <h5 class="name fw-bold mb-1">Amit Patel</h5>
+                    <p class="designation text-primary mb-0">Mumbai, Maharashtra</p>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
+
+          <!-- Slide 2: Testimonials 3 & 4 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+
+              <!-- Testimonial 3 -->
+              <div class="col-lg-6 col-md-8 mb-4">
+                <div class="d-flex flex-column flex-md-row align-items-center bg-white p-4 rounded-4 shadow-sm h-100">
+                  <img src="assets/images/AnanyaReddy.jpg" alt="Ananya Reddy"
+                    class="rounded-circle shadow flex-shrink-0 mb-3 mb-md-0 me-md-4"
+                    style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #fff;">
+                  <div class="text-center text-md-start">
+                    <p class="quote fst-italic text-muted mb-3">
+                      "Incredible visa assistance! The process was fast and hassle-free... perfect for international
+                      trips."
+                    </p>
+                    <h5 class="name fw-bold mb-1">Ananya Reddy</h5>
+                    <p class="designation text-primary mb-0">Hyderabad, Telangana</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 4 -->
+              <div class="col-lg-6 col-md-8 mb-4">
+                <div class="d-flex flex-column flex-md-row align-items-center bg-white p-4 rounded-4 shadow-sm h-100">
+                  <img src="assets/images/RohanGupta.jpg" alt="Rohan Gupta"
+                    class="rounded-circle shadow flex-shrink-0 mb-3 mb-md-0 me-md-4"
+                    style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #fff;">
+                  <div class="text-center text-md-start">
+                    <p class="quote fst-italic text-muted mb-3">
+                      "Best flight and hotel combo in town! The deals were unbeatable... Outstanding!"
+                    </p>
+                    <h5 class="name fw-bold mb-1">Rohan Gupta</h5>
+                    <p class="designation text-primary mb-0">Delhi NCR</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Slide 3: Testimonial 5 (single, centered) -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-6 col-md-8 offset-lg-3"> <!-- offset to center it visually -->
+                <div class="d-flex flex-column flex-md-row align-items-center bg-white p-4 rounded-4 shadow-sm h-100">
+                  <img src="assets/images/NehaKapoor.jpg" alt="Neha Kapoor"
+                    class="rounded-circle shadow flex-shrink-0 mb-3 mb-md-0 me-md-4"
+                    style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #fff;">
+                  <div class="text-center text-md-start">
+                    <p class="quote fst-italic text-muted mb-3">
+                      "A true hidden gem for travel bookings! Beautiful planning and a cozy vibe... will definitely
+                      return!"
+                    </p>
+                    <h5 class="name fw-bold mb-1">Neha Kapoor</h5>
+                    <p class="designation text-primary mb-0">Bangalore, Karnataka</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarouselMulti"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarouselMulti"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
   </section>
 
-  <script>
-    const testimonials = [
 
-      {
-        quote: "Absolutely loved the booking experience! The flight deals were amazing, with great options and seamless process. The hotel recommendations were spot on – luxurious and affordable. Visa guidance was clear and helpful. We'll book again soon!",
-        name: "Priya Sharma",
-        designation: "Noida, Uttar Pradesh",
-        src: "/assets/images/PriyaSharma.jpg"
-      },
-      {
-        quote: "Fantastic travel services! The forex rates were the best in the market, quick and reliable. Hotel check-in was smooth with early arrival options. Flight was on time with great seats. Highly recommend for family vacations!",
-        name: "Amit Patel",
-        designation: "Mumbai, Maharashtra",
-        src: "/assets/images/AmitPatel.jpg"
-      },
-      {
-        quote: "Incredible visa assistance! The process was fast and hassle-free, with all documents handled perfectly. Loved the hotel upgrades and affordable flight bookings. Very authentic support – perfect for international trips with friends.",
-        name: "Ananya Reddy",
-        designation: "Hyderabad, Telangana",
-        src: "/assets/images/AnanyaReddy.jpg"
-      },
-      {
-        quote: "Best flight and hotel combo in town! The deals were unbeatable, with premium seats and luxury stays. Forex conversion was spot on with no hidden fees. Excellent service and a wide selection of destinations. Outstanding!",
-        name: "Rohan Gupta",
-        designation: "Delhi NCR",
-        src: "/assets/images/RohanGupta.jpg"
-      },
-      {
-        quote: "A true hidden gem for travel bookings! The hotel options were comforting with great views and amenities. Visa approval came quickly, and forex rates were competitive. Beautiful planning and a cozy vibe throughout – will definitely return!",
-        name: "Neha Kapoor",
-        designation: "Bangalore, Karnataka",
-        src: "/assets/images/NehaKapoor.jpg"
-      }
-
-    ];
-
-    let activeIndex = 0;
-    const imageContainer = document.getElementById('image-container');
-    const nameElement = document.getElementById('name');
-    const designationElement = document.getElementById('designation');
-    const quoteElement = document.getElementById('quote');
-    const prevButton = document.getElementById('prev-button');
-    const nextButton = document.getElementById('next-button');
-
-    function calculateGap(width) {
-      const minWidth = 1024;
-      const maxWidth = 1456;
-      const minGap = 60;
-      const maxGap = 86;
-      if (width <= minWidth) return minGap;
-      if (width >= maxWidth) return Math.max(minGap, maxGap + 0.06018 * (width - maxWidth));
-      return minGap + (maxGap - minGap) * ((width - minWidth) / (maxWidth - minWidth));
-    }
-
-    function updateTestimonial(direction) {
-      activeIndex = (activeIndex + direction + testimonials.length) % testimonials.length;
-
-      const containerWidth = imageContainer.offsetWidth;
-      const gap = calculateGap(containerWidth);
-      const maxStickUp = gap * 0.8;
-
-      testimonials.forEach((testimonial, index) => {
-        let img = imageContainer.querySelector(`[data-index="${index}"]`);
-        if (!img) {
-          img = document.createElement('img');
-          img.src = testimonial.src;
-          img.alt = testimonial.name;
-          img.classList.add('testimonial-image');
-          img.dataset.index = index;
-          imageContainer.appendChild(img);
-        }
-
-        const offset = (index - activeIndex + testimonials.length) % testimonials.length;
-        const zIndex = testimonials.length - Math.abs(offset);
-        const scale = index === activeIndex ? 1 : 0.85;
-
-        let translateX = '0%', translateY = '0%', rotateY = 0;
-        if (offset === 1 || offset === testimonials.length - 1) {
-          translateX = '20%';
-          translateY = `-${maxStickUp / img.offsetHeight * 100}%`;
-          rotateY = -15;
-        } else if (offset !== 0) {
-          translateX = '-20%';
-          translateY = `-${maxStickUp / img.offsetHeight * 100}%`;
-          rotateY = 15;
-        }
-
-        gsap.to(img, {
-          zIndex: zIndex,
-          opacity: 1,
-          scale: scale,
-          x: translateX,
-          y: translateY,
-          rotateY: rotateY,
-          duration: 0.8,
-          ease: "power3.out"
-        });
-      });
-
-      gsap.to([nameElement, designationElement], {
-        opacity: 0,
-        y: -20,
-        duration: 0.3,
-        ease: "power2.in",
-        onComplete: () => {
-          nameElement.textContent = testimonials[activeIndex].name;
-          designationElement.textContent = testimonials[activeIndex].designation;
-          gsap.to([nameElement, designationElement], { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" });
-        }
-      });
-
-      gsap.to(quoteElement, {
-        opacity: 0,
-        y: -20,
-        duration: 0.3,
-        ease: "power2.in",
-        onComplete: () => {
-          quoteElement.innerHTML = testimonials[activeIndex].quote.split(' ').map(word => `<span class="word">${word}</span>`).join(' ');
-          gsap.to(quoteElement, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" });
-          gsap.from('.word', { opacity: 0, y: 10, stagger: 0.02, duration: 0.2, ease: "power2.out" });
-        }
-      });
-    }
-
-    prevButton.addEventListener('click', () => updateTestimonial(-1));
-    nextButton.addEventListener('click', () => updateTestimonial(1));
-
-    updateTestimonial(0);
-
-    let autoplayInterval = setInterval(() => updateTestimonial(1), 5000);
-    [prevButton, nextButton].forEach(btn => btn.addEventListener('click', () => clearInterval(autoplayInterval)));
-
-    window.addEventListener('resize', () => updateTestimonial(0));
-
-    // Simple animated WebGL background (replaced placeholder with a nice flowing gradient)
-    const vertexSource = `
-        attribute vec2 position;
-        varying vec2 vUv;
-        void main() {
-            vUv = position * 0.5 + 0.5;
-            gl_Position = vec4(position, 0, 1);
-        }
-    `;
-
-    const fragmentSource = `
-        precision mediump float;
-        uniform float iTime;
-        uniform vec2 iResolution;
-        varying vec2 vUv;
-
-        vec3 palette(float t) {
-            vec3 a = vec3(0.5, 0.5, 0.5);
-            vec3 b = vec3(0.5, 0.5, 0.5);
-            vec3 c = vec3(1.0, 1.0, 1.0);
-            vec3 d = vec3(0.263, 0.416, 0.557);
-            return a + b * cos(6.28318 * (c * t + d));
-        }
-
-        void main() {
-            vec2 uv = (gl_FragCoord.xy - iResolution.xy * 0.5) / iResolution.y;
-            uv *= 3.0;
-            float d = length(uv);
-            float angle = atan(uv.y, uv.x);
-            float flow = sin(d * 3.0 - iTime * 2.0 + angle * 5.0) * 0.5 + 0.5;
-            vec3 col = palette(flow * 0.2 + iTime * 0.1);
-            col *= 1.0 - smoothstep(0.0, 2.0, d);
-            gl_FragColor = vec4(col, 1.0);
-        }
-    `;
-
-    const canvas = document.getElementById('glcanvas');
-    const gl = canvas.getContext('webgl');
-    if (!gl) {
-      console.warn("WebGL not supported");
-    } else {
-      function resize() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        gl.viewport(0, 0, canvas.width, canvas.height);
-      }
-      window.addEventListener('resize', resize);
-      resize();
-
-      const createShader = (type, source) => {
-        const shader = gl.createShader(type);
-        gl.shaderSource(shader, source);
-        gl.compileShader(shader);
-        if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-          console.error(gl.getShaderInfoLog(shader));
-          return null;
-        }
-        return shader;
-      };
-
-      const program = gl.createProgram();
-      gl.attachShader(program, createShader(gl.VERTEX_SHADER, vertexSource));
-      gl.attachShader(program, createShader(gl.FRAGMENT_SHADER, fragmentSource));
-      gl.linkProgram(program);
-
-      const buffer = gl.createBuffer();
-      gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1]), gl.STATIC_DRAW);
-
-      const positionLoc = gl.getAttribLocation(program, 'position');
-      const timeLoc = gl.getUniformLocation(program, 'iTime');
-      const resLoc = gl.getUniformLocation(program, 'iResolution');
-
-      const render = (now) => {
-        gl.useProgram(program);
-        gl.enableVertexAttribArray(positionLoc);
-        gl.vertexAttribPointer(positionLoc, 2, gl.FLOAT, false, 0, 0);
-        gl.uniform1f(timeLoc, now * 0.001);
-        gl.uniform2f(resLoc, canvas.width, canvas.height);
-        gl.drawArrays(gl.TRIANGLES, 0, 6);
-        requestAnimationFrame(render);
-      };
-      requestAnimationFrame(render);
-    }
-  </script>
-
-  <section class="video-section py-5 bg-light mt-5">
+  <section class="video-section py-5 bg-white ">
     <div class="container">
       <h2 class="text-center fw-bold text-black"
         style="text-transform: uppercase; text-shadow: 0 4px 15px rgba(0,0,0,0.3); position: relative;">
@@ -686,75 +573,102 @@
     </div>
   </section>
 
-  <!-- Bigger Footer -->
-  <footer class="bg-dark text-white pt-5 pb-4 mt-5">
-    <div class="container text-md-left">
-      <div class="row text-md-left">
-        <!-- About -->
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <img height="55px" width="95px" src="./assets/images/zenith-logo.webp" alt="" srcset="">
-          <p>
-            Zenith Leisure Holidays Ltd, founded in the year 1997 is one of India's leading travel companies
-            that
-            offers
-            hassle-free holiday experience, taking care of all your travel needs.
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-4 ">
+    <div class="container">
+      <div class="row text-md-start"> <!-- Better than text-md-left -->
+
+        <!-- Company Logo & About -->
+        <div class="col-md-6 col-lg-3 col-xl-3 mb-4 mb-md-0">
+          <img src="assets/images/zenith-logo.webp" alt="Zenith Holidays Logo" width="95" height="55" class="mb-3">
+          <p class="small">
+            Zenith Leisure Holidays Ltd, founded in 1997, is one of India's leading travel companies offering
+            hassle-free holiday experiences, taking care of all your travel needs.
           </p>
+          <div class="d-flex gap-4 fs-6">
+            <a href="https://www.facebook.com/zenithleisureholidays/" target="_blank" rel="noopener"
+              class="text-white hover-text-primary" aria-label="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://twitter.com/zenitholidays" target="_blank" rel="noopener"
+              class="text-white hover-text-primary" aria-label="Twitter">
+              <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/zenithleisureholidays/" target="_blank" rel="noopener"
+              class="text-white hover-text-primary" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/zenith-leisure-holidays-pvt-ltd/" target="_blank" rel="noopener"
+              class="text-white hover-text-primary" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
         </div>
 
         <!-- Quick Links -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
-            Quick Links
-          </h5>
-          <p>
-            <a href="#" class="text-white" style="text-decoration: none">Home</a>
+        <div class="col-md-6 col-lg-3 col-xl-3 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 fw-bold text-white">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="/" class="text-white text-decoration-none hover-text-primary">Home</a>
+            </li>
+            <li class="mb-2"><a href="about.html" class="text-white text-decoration-none hover-text-primary">About</a>
+            </li>
+            <li class="mb-2"><a href="verticals.html"
+                class="text-white text-decoration-none hover-text-primary">Services</a></li>
+            <li class="mb-2"><a href="contact.html"
+                class="text-white text-decoration-none hover-text-primary">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3 col-xl-3 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 fw-bold text-white">Useful Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="awards.html" class="text-white text-decoration-none hover-text-primary">Awards &
+                Accolades</a>
+            </li>
+            <li class="mb-2"><a href="location.html" class="text-white text-decoration-none hover-text-primary">Office
+                Location</a>
+            </li>
+            <li class="mb-2"><a href="csr.html" class="text-white text-decoration-none hover-text-primary">CSR
+                Activity</a>
+            </li>
+
+          </ul>
+        </div>
+
+
+
+
+        <!-- Contact Info -->
+        <div class="col-md-6 col-lg-3 col-xl-3 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 fw-bold text-white">Contact</h5>
+          <p class="mb-2"><i class="bi bi-house-door-fill me-3"></i><strong>HeadOffice :</strong> 1st Floor, Annapurna
+            Apartment,
+            68 Ballygunge Circular Road,
+            Kolkata – 700019</p>
+          <p class="mb-2">
+            <i class="bi bi-envelope-fill me-3"></i>
+            <a href="mailto:web@zenithholidays.com" class="text-white text-decoration-none hover-text-primary">
+              web@zenithholidays.com
+            </a>
           </p>
-          <p>
-            <a href="about.html" class="text-white" style="text-decoration: none">About</a>
-          </p>
-          <p>
-            <a href="verticals.html" class="text-white" style="text-decoration: none">Services</a>
-          </p>
-          <p>
-            <a href="contact.html" class="text-white" style="text-decoration: none">Contact</a>
+          <p class="mb-2">
+            <i class="bi bi-telephone-fill me-3"></i>
+            <a href="tel:+919240233200" class="text-white text-decoration-none hover-text-primary">
+              +91 9240233200
+            </a>
           </p>
         </div>
 
-        <!-- Contact -->
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
-            Contact
-          </h5>
-          <p><i class="bi bi-house-door-fill me-2"></i> Noida, India</p>
-          <p><i class="bi bi-envelope-fill me-2"></i>web@zenithholidays.com</p>
-          <p><i class="bi bi-telephone-fill me-2"></i> +91 9240233200</p>
-        </div>
-
-        <!-- Social -->
-        <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mt-3">
-          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
-            Follow us
-          </h5>
-          <a href="https://www.facebook.com/zenithleisureholidays/" class="text-white me-4"><i
-              class="bi bi-facebook"></i></a>
-          <a href="https://twitter.com/zenitholidays" class="text-white me-4"><i class="bi bi-twitter"></i></a>
-          <a href="https://www.instagram.com/zenithleisureholidays/" class="text-white me-4"><i
-              class="bi bi-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/zenith-leisure-holidays-pvt-ltd/" class="text-white me-4"><i
-              class="bi bi-linkedin"></i></a>
-        </div>
       </div>
 
-      <hr class="mb-4" />
+      <hr class="my-5 border-secondary">
 
-      <!-- Bottom Line -->
-      <div class="row align-items-center">
-        <div class="col-md-7 col-lg-8">
-          <p class="text-white">Copyright © 2024 Zenithholidays.com All Rights Reserved</p>
+      <!-- Bottom Copyright Line -->
+      <div class="row align-items-center text-center text-md-start">
+        <div class="col-md-12 text-center ">
+          <p class="mb-0 small">Copyright © 2025 Zenithholidays.com All Rights Reserved</p>
         </div>
-        <div class="col-md-5 col-lg-4">
-          <p class="text-white text-end">Designed by Zenithholidays</p>
-        </div>
+
       </div>
     </div>
   </footer>
