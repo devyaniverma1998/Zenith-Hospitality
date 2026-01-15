@@ -21,69 +21,95 @@
 <body>
 
   <header class="zenith-navbar">
-    <div class="navbar-container">
-      <!-- Logo (Always visible) -->
-      <a href="/" class="logo">
-        <img src="assets/images/zenith-logo.webp" alt="Zenith Logo" class="logo-img">
-      </a>
-      <!-- Mobile Menu Toggle -->
-      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
-        <!-- Hamburger Icon -->
-        <svg class="icon icon-hamburger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-        <!-- Close Icon -->
-        <svg class="icon icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-      <nav id="main-menu" class="main-menu">
-        <a href="/" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="verticals.html" class="nav-link">Our Verticals</a>
-        <a href="awards.html" class="nav-link">Awards & Accolades</a>
-        <a href="location.html" class="nav-link">Locations</a>
-        <a href="contact.html" class="nav-link">Contact Us</a>
-        <a href="csr.html" class="nav-link">CSR</a>
-      </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+      <div class="container">
+
+        <!-- Logo Left -->
+        <a class="navbar-brand" href="/">
+          <img src="assets/images/zenith-logo.webp" height="56" alt="Zenith Logo">
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCenter">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Center Menu -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCenter">
+          <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-3 text-center">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="verticals.html">Our Verticals</a></li>
+            <li class="nav-item"><a class="nav-link" href="awards.html">Awards & Accolades</a></li>
+            <li class="nav-item"><a class="nav-link" href="location.html">Locations</a></li>
+            <li class="nav-item"><a class="nav-link" href="csr.html">CSR</a></li>
+            <li class="nav-item d-lg-none mt-2">
+              <a href="contact.html" class="btn btn-primary w-100 rounded-pill">Contact Us</a>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- Contact Button Right -->
+        <div class="d-none d-lg-block">
+          <a href="contact.html" class="btn btn-primary rounded-pill px-4">
+            Contact Us
+          </a>
+        </div>
+
+      </div>
+    </nav>
+
   </header>
-  <script>
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const mainMenu = document.getElementById('main-menu');
-    const hamburger = document.querySelector('.icon-hamburger');
-    const closeIcon = document.querySelector('.icon-close');
 
-    menuToggle.addEventListener('click', () => {
-      mainMenu.classList.toggle('open');
-      hamburger.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
-    });
+  <style>
+    .logo-font-same {
 
-    // Mobile dropdown toggle
-    const dropdown = document.querySelector('.dropdown');
-    const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      /* Primary match */
+      /* Alternative free option: font-family: "Montserrat", sans-serif; */
+      font-weight: 700;
+      /* Black / ExtraBold */
+      font-size: 2.2rem;
+      /* Scale to your needs */
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      /* Subtle luxury spacing */
+      line-height: 0.95;
+      color: #e93339;
+      /* Approximate dark blue/navy often used */
 
-    dropdownToggle.addEventListener('click', (e) => {
-      if (window.innerWidth < 1024) {
-        e.preventDefault();
-        dropdown.classList.toggle('open');
-      }
-    });
-  </script>
+
+    }
+
+    .zenith-word {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      /* Primary match */
+      /* Alternative free option: font-family: "Montserrat", sans-serif; */
+      font-weight: 700;
+      /* Black / ExtraBold */
+      font-size: 2.2rem;
+      /* Scale to your needs */
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      /* Subtle luxury spacing */
+      line-height: 0.95;
+      color: #0aa6e0;
+      /* Approximate dark blue/navy often used */
+    }
+  </style>
   <section id="hero-slide">
     <!-- Centered Static Text with Dynamic Keyword and Description -->
     <div
       style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; color: white; text-align: center;">
-      <h3 class="text-white display-6">
-        Zenith Hospitality
-        <p id="dynamic-keyword" class="slide-keyword  fw-bold display-5" style="color:red">Unforgettable
+      <h3 class="text-white display-6 ">
+        <span class="zenith-word"> Zenith </span> <span class="logo-font-same"> Hospitality</span>
+        <p id="dynamic-keyword" class="slide-keyword  fw-bold display-5" style="color:white">Unforgettable
           Holidays
         </p>
       </h3>
       <p>
-        <span id="dynamic-desc" class="slide-desc">
+        <span id="dynamic-desc" class="slide-desc " style="color:rgb(205, 205, 205)">
           Luxurious stays, exotic tours, and all-in-one travel packages.
         </span>
       </p>
@@ -93,19 +119,19 @@
     <div id="heroCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="500">
       <div class="carousel-inner" id="carousel-inner">
         <div class="carousel-item active">
-          <img src="./assets/images/vholiday.jpg" class="d-block w-100" alt="Unforgettable Holidays" />
+          <img src="./assets/images/vholiday.webp" class="d-block w-100" alt="Unforgettable Holidays" />
         </div>
         <div class="carousel-item">
-          <img src="./assets/images/flights.jpg" class="d-block w-100" alt="Smart Travel Solutions" />
+          <img src="./assets/images/flights.webp" class="d-block w-100" alt="Smart Travel Solutions" />
         </div>
         <div class="carousel-item">
-          <img src="./assets/images/events.jpg" class="d-block w-100" alt="Events & Umrah Experts" />
+          <img src="./assets/images/events.webp" class="d-block w-100" alt="Events & Umrah Experts" />
         </div>
         <div class="carousel-item">
-          <img src="./assets/images/seniorct.jpg" class="d-block w-100" alt="Senior Citizen Tours" />
+          <img src="./assets/images/seniorct.webp" class="d-block w-100" alt="Senior Citizen Tours" />
         </div>
         <div class="carousel-item">
-          <img src="./assets/images/wedding.jpg" class="d-block w-100" alt="Luxury Stays & Weddings" />
+          <img src="./assets/images/wedding.webp" class="d-block w-100" alt="Luxury Stays & Weddings" />
         </div>
       </div>
 
@@ -145,7 +171,7 @@
             </div>
 
             <!-- Main Image -->
-            <img src="assets/images/aboutus-lagecy.jpg" class="img-fluid rounded-3 shadow-lg"
+            <img src="assets/images/aboutus-lagecy.webp" class="img-fluid rounded-3 shadow-lg"
               alt="Zenith Hospitality Legacy - Happy Family Travelers on Vacation">
           </div>
         </div>
@@ -216,88 +242,88 @@
         <div class="row g-3">
           <div class="col-md-3" data-aos="flip-left" data-aos-duration="100">
             <div class="image-card">
-              <img src="assets/images/pexels-asadphoto-1024989.jpg" alt="Holidays" />
+              <img src="assets/images/pexels-asadphoto-1024989.webp" alt="Holidays" />
               <div class="overlay-text">Holidays</div>
             </div>
           </div>
           <div class="col-md-3" data-aos="flip-left" data-aos-duration="120">
             <div class="image-card">
-              <img src="./assets/images/pexels-thorsten-technoman-109353-338504.jpg" alt="Hotels" />
+              <img src="./assets/images/pexels-thorsten-technoman-109353-338504.webp" alt="Hotels" />
               <div class="overlay-text">Hotels</div>
             </div>
           </div>
           <div class="col-md-3" data-aos="flip-left" data-aos-duration="140">
             <div class="image-card">
-              <img src="./assets/images/flights.jpg" alt="Flights" />
+              <img src="./assets/images/flights.webp" alt="Flights" />
               <div class="overlay-text">Flights</div>
             </div>
           </div>
 
           <div class="col-md-3" data-aos="flip-left" data-aos-duration="160">
             <div class="image-card">
-              <img src="./assets/images/pexels-divinetechygirl-1181396.jpg" alt="Holidays" />
+              <img src="./assets/images/pexels-divinetechygirl-1181396.webp" alt="Holidays" />
               <div class="overlay-text">MICE</div>
             </div>
           </div>
           <div class="col-md-3" data-aos="flip-left" data-aos-duration="180">
             <div class="image-card">
-              <img src="./assets/images/pexels-weekendplayer-186461.jpg" alt="Hotels" />
+              <img src="./assets/images/pexels-weekendplayer-186461.webp" alt="Hotels" />
               <div class="overlay-text">Forex</div>
             </div>
           </div>
           <div class="col-md-3" data-aos="flip-left" data-aos-duration="200">
             <div class="image-card">
-              <img src="./assets/images/pexels-n-voitkevich-7235804.jpg" alt="Flights" />
+              <img src="./assets/images/pexels-n-voitkevich-7235804.webp" alt="Flights" />
               <div class="overlay-text">Visa</div>
             </div>
           </div>
 
           <div class="col-md-3" data-aos="flip-left" data-aos-duration="220">
             <div class="image-card">
-              <img src="./assets/images/pexels-mikhail-nilov-8297425.jpg" alt="Holidays" />
+              <img src="./assets/images/pexels-mikhail-nilov-8297425.webp" alt="Holidays" />
               <div class="overlay-text">Insurance</div>
             </div>
           </div>
           <div class="col-md-3" data-aos="flip-left" data-aos-duration="240">
             <div class="image-card">
-              <img src="./assets/images/pexels-kampus-7551617.jpg" alt="Hotels" />
+              <img src="./assets/images/pexels-kampus-7551617.webp" alt="Hotels" />
               <div class="overlay-text">Senior Citizen</div>
             </div>
           </div>
           <div class="col-md-3" data-aos="flip-left" data-aos-duration="260">
             <div class="image-card">
-              <img src="./assets/images/vLuxury.jpg" alt="Flights" />
+              <img src="./assets/images/vLuxury.webp" alt="Flights" />
               <div class="overlay-text">Luxury Stay</div>
             </div>
           </div>
 
           <div class="col-md-3" data-aos="flip-left" data-aos-duration="280">
             <div class="image-card">
-              <img src="./assets/images/vWedding.jpg" alt="Holidays" />
+              <img src="./assets/images/vWedding.webp" alt="Holidays" />
               <div class="overlay-text">Weddings</div>
             </div>
           </div>
           <div class="col-md-3" data-aos="flip-left" data-aos-duration="300">
             <div class="image-card">
-              <img src="./assets/images/vOrchid.jpg" alt="Hotels" />
+              <img src="./assets/images/vOrchid.webp" alt="Hotels" />
               <div class="overlay-text">Orchid Incoming</div>
             </div>
           </div>
           <div class="col-md-3" data-aos="flip-left" data-aos-duration="320">
             <div class="image-card">
-              <img src="./assets/images/vEvent.jpg" alt="Flights" />
+              <img src="./assets/images/vEvent.webp" alt="Flights" />
               <div class="overlay-text">Events</div>
             </div>
           </div>
           <div class="col-md-3" data-aos="flip-left" data-aos-duration="340">
             <div class="image-card">
-              <img src="./assets/images/umrah.jpg" alt="Flights" />
+              <img src="./assets/images/umrah.webp" alt="Flights" />
               <div class="overlay-text">Umrah</div>
             </div>
           </div>
           <div class="col-md-3" data-aos="flip-left" data-aos-duration="360">
             <div class="image-card">
-              <img src="./assets/images/education.jpg" alt="Flights" />
+              <img src="./assets/images/education.webp" alt="Flights" />
               <div class="overlay-text">Education</div>
             </div>
           </div>
@@ -336,7 +362,7 @@
             </li>
             <li class="list-group-item  border-0  bg-transparent">
               <i class="bi bi-check-circle-fill text-success me-3 fs-4"></i>
-              13 specialized service verticals for comprehensive travel solutions
+              14 specialized service verticals for comprehensive travel solutions
             </li>
             <li class="list-group-item  border-0  bg-transparent">
               <i class="bi bi-check-circle-fill text-success me-3 fs-4"></i>
@@ -360,7 +386,7 @@
         <!-- Image Side -->
         <div class="col-lg-6 order-lg-2" data-aos="fade-left" data-aos-duration="10">
           <div class="position-relative rounded-4 overflow-hidden shadow-lg">
-            <img src="assets/images/why.jpg" class="img-fluid w-100"
+            <img src="assets/images/why.webp" class="img-fluid w-100"
               alt="Expert travel consultant providing personalized luxury travel planning to happy clients"
               style="height: 400px; object-fit: cover;">
             <div class="position-absolute bottom-0 start-0 end-0 bg-gradient"
@@ -413,7 +439,7 @@
               <!-- Testimonial 1 -->
               <div class="col-lg-6 col-md-8 mb-4">
                 <div class="d-flex flex-column flex-md-row align-items-center bg-white p-4 rounded-4 shadow-sm h-100">
-                  <img src="assets/images/PriyaSharma.jpg" alt="Priya Sharma"
+                  <img src="assets/images/PriyaSharma.webp" alt="Priya Sharma"
                     class="rounded-circle shadow flex-shrink-0 mb-3 mb-md-0 me-md-4"
                     style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #fff;">
                   <div class="text-center text-md-start">
@@ -429,7 +455,7 @@
               <!-- Testimonial 2 -->
               <div class="col-lg-6 col-md-8 mb-4">
                 <div class="d-flex flex-column flex-md-row align-items-center bg-white p-4 rounded-4 shadow-sm h-100">
-                  <img src="assets/images/AmitPatel.jpg" alt="Amit Patel"
+                  <img src="assets/images/AmitPatel.webp" alt="Amit Patel"
                     class="rounded-circle shadow flex-shrink-0 mb-3 mb-md-0 me-md-4"
                     style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #fff;">
                   <div class="text-center text-md-start">
@@ -453,7 +479,7 @@
               <!-- Testimonial 3 -->
               <div class="col-lg-6 col-md-8 mb-4">
                 <div class="d-flex flex-column flex-md-row align-items-center bg-white p-4 rounded-4 shadow-sm h-100">
-                  <img src="assets/images/AnanyaReddy.jpg" alt="Ananya Reddy"
+                  <img src="assets/images/AnanyaReddy.webp" alt="Ananya Reddy"
                     class="rounded-circle shadow flex-shrink-0 mb-3 mb-md-0 me-md-4"
                     style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #fff;">
                   <div class="text-center text-md-start">
@@ -470,7 +496,7 @@
               <!-- Testimonial 4 -->
               <div class="col-lg-6 col-md-8 mb-4">
                 <div class="d-flex flex-column flex-md-row align-items-center bg-white p-4 rounded-4 shadow-sm h-100">
-                  <img src="assets/images/RohanGupta.jpg" alt="Rohan Gupta"
+                  <img src="assets/images/RohanGupta.webp" alt="Rohan Gupta"
                     class="rounded-circle shadow flex-shrink-0 mb-3 mb-md-0 me-md-4"
                     style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #fff;">
                   <div class="text-center text-md-start">
@@ -491,7 +517,7 @@
             <div class="row justify-content-center">
               <div class="col-lg-6 col-md-8 mb-4"> <!-- offset to center it visually -->
                 <div class="d-flex flex-column flex-md-row align-items-center bg-white p-4 rounded-4 shadow-sm h-100">
-                  <img src="assets/images/NehaKapoor.jpg" alt="Neha Kapoor"
+                  <img src="assets/images/NehaKapoor.webp" alt="Neha Kapoor"
                     class="rounded-circle shadow flex-shrink-0 mb-3 mb-md-0 me-md-4"
                     style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #fff;">
                   <div class="text-center text-md-start">
@@ -506,7 +532,7 @@
               </div>
               <div class="col-lg-6 col-md-8 mb-4">
                 <div class="d-flex flex-column flex-md-row align-items-center bg-white p-4 rounded-4 shadow-sm h-100">
-                  <img src="assets/images/RahulGupta.jpg" alt="Rahul Gupta"
+                  <img src="assets/images/RahulGupta.webp" alt="Rahul Gupta"
                     class="rounded-circle shadow flex-shrink-0 mb-3 mb-md-0 me-md-4"
                     style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #fff;">
                   <div class="text-center text-md-start">
@@ -747,7 +773,7 @@
       <!-- Bottom Copyright Line -->
       <div class="row align-items-center text-center text-md-start">
         <div class="col-md-12 text-center ">
-          <p class="mb-0 small">Copyright © 2025 Zenithholidays.com All Rights Reserved</p>
+          <p class="mb-0 small">Copyright © 2026 Zenith Hospitality. All Rights Reserved.</p>
         </div>
 
       </div>

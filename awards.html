@@ -14,60 +14,49 @@
 
 <body>
   <header class="zenith-navbar">
-    <div class="navbar-container">
-      <!-- Logo (Always visible) -->
-      <a href="/" class="logo">
-        <img src="assets/images/zenith-logo.webp" alt="Zenith Logo" class="logo-img">
-      </a>
-      <!-- Mobile Menu Toggle -->
-      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
-        <!-- Hamburger Icon -->
-        <svg class="icon icon-hamburger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-        <!-- Close Icon -->
-        <svg class="icon icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-      <nav id="main-menu" class="main-menu">
-        <a href="/" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="verticals.html" class="nav-link">Our Verticals</a>
-        <a href="awards.html" class="nav-link">Awards & Accolades</a>
-        <a href="location.html" class="nav-link">Locations</a>
-        <a href="contact.html" class="nav-link">Contact Us</a>
-        <a href="csr.html" class="nav-link">CSR</a>
-      </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+      <div class="container">
+
+        <!-- Logo Left -->
+        <a class="navbar-brand" href="/">
+          <img src="assets/images/zenith-logo.webp" height="56" alt="Zenith Logo">
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCenter">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Center Menu -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCenter">
+          <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-3 text-center">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="verticals.html">Our Verticals</a></li>
+            <li class="nav-item"><a class="nav-link" href="awards.html">Awards & Accolades</a></li>
+            <li class="nav-item"><a class="nav-link" href="location.html">Locations</a></li>
+            <li class="nav-item"><a class="nav-link" href="csr.html">CSR</a></li>
+            <li class="nav-item d-lg-none mt-2">
+              <a href="contact.html" class="btn btn-primary w-100 rounded-pill">Contact Us</a>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- Contact Button Right -->
+        <div class="d-none d-lg-block">
+          <a href="contact.html" class="btn btn-primary rounded-pill px-4">
+            Contact Us
+          </a>
+        </div>
+
+      </div>
+    </nav>
+
   </header>
-  <script>
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const mainMenu = document.getElementById('main-menu');
-    const hamburger = document.querySelector('.icon-hamburger');
-    const closeIcon = document.querySelector('.icon-close');
-
-    menuToggle.addEventListener('click', () => {
-      mainMenu.classList.toggle('open');
-      hamburger.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
-    });
-
-    // Mobile dropdown toggle
-    const dropdown = document.querySelector('.dropdown');
-    const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
-
-    dropdownToggle.addEventListener('click', (e) => {
-      if (window.innerWidth < 1024) {
-        e.preventDefault();
-        dropdown.classList.toggle('open');
-      }
-    });
-  </script>
 
   <!-- Hero Section -->
-  <section class="hero text-center" style="background-image: url('./assets/images/award.jpg');">
+  <section class="hero text-center" style="background-image: url('./assets/images/award.webp');">
     <div class="container">
       <h1 class="hero__title">Awards & Accolades</h1>
       <p class="hero__subtitle">Celebrating Excellence in Hospitality</p>
@@ -97,7 +86,7 @@
         <!-- Award 1: Certificate of Appreciation -->
         <div class="col-md-6 col-lg-4 col-xl-3">
           <div class="award-card h-100 rounded shadow-sm overflow-hidden bg-white position-relative">
-            <img src="assets/images/award-1.png" alt="Certificate of Appreciation - Best Partner 2024"
+            <img src="assets/images/award-1.webp" alt="Certificate of Appreciation - Best Partner 2024"
               class="img-fluid w-100" style="height: 250px; object-fit: cover;" />
             <div class="award-caption p-3 text-center bg-white">
               <h5 class="fw-bold mb-1">Certificate of Appreciation</h5>
@@ -109,7 +98,7 @@
         <!-- Award 2: Dubai MICE Star Awards -->
         <div class="col-md-6 col-lg-4 col-xl-3">
           <div class="award-card h-100 rounded shadow-sm overflow-hidden bg-white position-relative">
-            <img src="assets/images/award-2.png" alt="Dubai MICE Star Awards 2024 - Gold Winner" class="img-fluid w-100"
+            <img src="assets/images/award-2.webp" alt="Dubai MICE Star Awards 2024 - Gold Winner" class="img-fluid w-100"
               style="height: 250px; object-fit: cover;" />
             <div class="award-caption p-3 text-center bg-white">
               <h5 class="fw-bold mb-1">Dubai MICE Star Awards</h5>
@@ -121,7 +110,7 @@
         <!-- Award 3: Team Recognition -->
         <div class="col-md-6 col-lg-4 col-xl-3">
           <div class="award-card h-100 rounded shadow-sm overflow-hidden bg-white position-relative">
-            <img src="assets/images/award-3.png" alt="Team receiving recognition award" class="img-fluid w-100"
+            <img src="assets/images/award-3.webp" alt="Team receiving recognition award" class="img-fluid w-100"
               style="height: 250px; object-fit: cover;" />
             <div class="award-caption p-3 text-center bg-white">
               <h5 class="fw-bold mb-1">Team Excellence Award</h5>
@@ -133,7 +122,7 @@
         <!-- Award 4: Malaysia Tourism Award -->
         <div class="col-md-6 col-lg-4 col-xl-3">
           <div class="award-card h-100 rounded shadow-sm overflow-hidden bg-white position-relative">
-            <img src="assets/images/award-4.png" alt="Malaysia Tourism Board Recognition" class="img-fluid w-100"
+            <img src="assets/images/award-4.webp" alt="Malaysia Tourism Board Recognition" class="img-fluid w-100"
               style="height: 250px; object-fit: cover;" />
             <div class="award-caption p-3 text-center bg-white">
               <h5 class="fw-bold mb-1">Malaysia Tourism Recognition</h5>
@@ -240,7 +229,7 @@
       <!-- Bottom Copyright Line -->
       <div class="row align-items-center text-center text-md-start">
         <div class="col-md-12 text-center ">
-          <p class="mb-0 small">Copyright © 2025 Zenithholidays.com All Rights Reserved</p>
+         <p class="mb-0 small">Copyright © 2026 Zenith Hospitality. All Rights Reserved.</p>
         </div>
 
       </div>

@@ -17,60 +17,50 @@
 
 <body>
   <header class="zenith-navbar">
-    <div class="navbar-container">
-      <!-- Logo (Always visible) -->
-      <a href="/" class="logo">
-        <img src="assets/images/zenith-logo.webp" alt="Zenith Logo" class="logo-img">
-      </a>
-      <!-- Mobile Menu Toggle -->
-      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
-        <!-- Hamburger Icon -->
-        <svg class="icon icon-hamburger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-        <!-- Close Icon -->
-        <svg class="icon icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-      <nav id="main-menu" class="main-menu">
-        <a href="/" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="verticals.html" class="nav-link">Our Verticals</a>
-        <a href="awards.html" class="nav-link">Awards & Accolades</a>
-        <a href="location.html" class="nav-link">Locations</a>
-        <a href="contact.html" class="nav-link">Contact Us</a>
-        <a href="csr.html" class="nav-link">CSR</a>
-      </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+      <div class="container">
+
+        <!-- Logo Left -->
+        <a class="navbar-brand" href="/">
+          <img src="assets/images/zenith-logo.webp" height="56" alt="Zenith Logo">
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCenter">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Center Menu -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCenter">
+          <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-3 text-center">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="verticals.html">Our Verticals</a></li>
+            <li class="nav-item"><a class="nav-link" href="awards.html">Awards & Accolades</a></li>
+            <li class="nav-item"><a class="nav-link" href="location.html">Locations</a></li>
+            <li class="nav-item"><a class="nav-link" href="csr.html">CSR</a></li>
+            <li class="nav-item d-lg-none mt-2">
+              <a href="contact.html" class="btn btn-primary w-100 rounded-pill">Contact Us</a>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- Contact Button Right -->
+        <div class="d-none d-lg-block">
+          <a href="contact.html" class="btn btn-primary rounded-pill px-4">
+            Contact Us
+          </a>
+        </div>
+
+      </div>
+    </nav>
+
   </header>
-  <script>
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const mainMenu = document.getElementById('main-menu');
-    const hamburger = document.querySelector('.icon-hamburger');
-    const closeIcon = document.querySelector('.icon-close');
-
-    menuToggle.addEventListener('click', () => {
-      mainMenu.classList.toggle('open');
-      hamburger.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
-    });
-
-    // Mobile dropdown toggle
-    const dropdown = document.querySelector('.dropdown');
-    const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
-
-    dropdownToggle.addEventListener('click', (e) => {
-      if (window.innerWidth < 1024) {
-        e.preventDefault();
-        dropdown.classList.toggle('open');
-      }
-    });
-  </script>
 
 
-  <section class="hero text-center" style="background-image: url('./assets/images/csr.jpg');">
+
+  <section class="hero text-center" style="background-image: url('./assets/images/csr.webp');">
     <div class="container">
       <h1 class="hero__title">CSR Activities</h1>
       <p class="hero__subtitle">Committed to creating positive impact through sustainable practices,
@@ -103,152 +93,11 @@
         </div>
       </div>
 
-      <!-- Main Introduction Card -->
-      <!-- <div class="row justify-content-center mb-5">
-        <div class="col-12">
-          <div class="csr-intro-card card border-0 shadow-lg">
-            <div class="card-body p-5 text-center">
-              <h5 class=" display-7 fw-bold text-dark mb-4">Zenith Hospitality</h5>
-              <p class="text-muted">
-                At Zenith Hospitality, we believe in giving back to the community and making a positive impact.
-                Our CSR initiatives focus on empowering individuals through education, preserving cultural heritage,
-                and supporting those in need. Zenith Campus, our learning and development wing, offers vocational
-                and technical training in areas like travel management, event planning, and digital marketing,
-                helping students build skills for the future. Through Mithila Kala Sansthan, we promote traditional
-                art forms and support local artisans by providing them with platforms to showcase their work.
-                We also offer scholarships to deserving students, ensuring that financial constraints don't hinder
-                their educational aspirations. Our commitment extends to community development projects,
-                where we collaborate with local organizations to address specific needs, such as healthcare access
-                and infrastructure improvements. At Zenith, we're dedicated to creating opportunities and fostering
-                growth, making a meaningful difference in the lives of many.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> -->
+  
 
       <!-- CSR Cards Grid -->
       <div class="row g-3">
-        <div class="col-lg-3 col-md-6">
-          <div class="csr-card card border-0 shadow-sm h-100 text-center p-3">
-            <div class="csr-icon fs-1 mb-3">🌍</div>
-            <h5 class="csr-card-title  fw-bold">3P Structure</h5>
-            <p class="csr-card-text text-muted small">
-              We embrace 3P: People, Planet, Profit via Triple Bottom Line accounting.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="csr-card card border-0 shadow-sm h-100 text-center p-3">
-            <div class="csr-icon fs-1 mb-3">🌿</div>
-            <h5 class="csr-card-title  fw-bold">Environmental Welfare</h5>
-            <p class="csr-card-text text-muted small">
-              Minimizing tourism's environmental footprint through sustainable resource selection and eco-friendly
-              practices.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="csr-card card border-0 shadow-sm h-100 text-center p-3">
-            <div class="csr-icon fs-1 mb-3">❤️</div>
-            <h5 class="csr-card-title  fw-bold">CSR Activities</h5>
-            <p class="csr-card-text text-muted small">
-              Focused on community development, education, and healthcare to uplift underprivileged lives.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="csr-card card border-0 shadow-sm h-100 text-center p-3">
-            <div class="csr-icon fs-1 mb-3">📚</div>
-            <h5 class="csr-card-title  fw-bold">Education Support</h5>
-            <p class="csr-card-text text-muted small">
-              Supporting schools with infrastructure and materials for better learning access in rural areas.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="csr-card card border-0 shadow-sm h-100 text-center p-3">
-            <div class="csr-icon fs-1 mb-3">🛡️</div>
-            <h5 class="csr-card-title  fw-bold">Health & Hygiene</h5>
-            <p class="csr-card-text text-muted small">
-              Health camps, clean water initiatives, and sanitation drives for healthier communities.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="csr-card card border-0 shadow-sm h-100 text-center p-3">
-            <div class="csr-icon fs-1 mb-3">👥</div>
-            <h5 class="csr-card-title  fw-bold">Community Empowerment</h5>
-            <p class="csr-card-text text-muted small">
-              Skill training and employment opportunities promoting self-reliance and sustainable growth.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="csr-card card border-0 shadow-sm h-100 text-center p-3">
-            <div class="csr-icon fs-1 mb-3">🐾</div>
-            <h5 class="csr-card-title  fw-bold">Animal Welfare</h5>
-            <p class="csr-card-text text-muted small">
-              Protecting wildlife, promoting cruelty-free tourism, and supporting animal care NGOs.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="csr-card card border-0 shadow-sm h-100 text-center p-3">
-            <div class="csr-icon fs-1 mb-3">🎨</div>
-            <h5 class="csr-card-title  fw-bold">Cultural Preservation</h5>
-            <p class="csr-card-text text-muted small">
-              Supporting local arts, crafts, music, and traditions to preserve rich cultural heritage.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="csr-card card border-0 shadow-sm h-100 text-center p-3">
-            <div class="csr-icon fs-1 mb-3">🏡</div>
-            <h5 class="csr-card-title  fw-bold">Rural Tourism</h5>
-            <p class="csr-card-text text-muted small">
-              Promoting village-based tourism for authentic experiences and local livelihood opportunities.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="csr-card card border-0 shadow-sm h-100 text-center p-3">
-            <div class="csr-icon fs-1 mb-3">👩‍💼</div>
-            <h5 class="csr-card-title  fw-bold">Empowering Women</h5>
-            <p class="csr-card-text text-muted small">
-              Supporting self-help groups and entrepreneurship training for women's financial independence.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="csr-card card border-0 shadow-sm h-100 text-center p-3">
-            <div class="csr-icon fs-1 mb-3">🌐</div>
-            <h5 class="csr-card-title  fw-bold">Global Partnerships</h5>
-            <p class="csr-card-text text-muted small">
-              Collaborating with international bodies to align with global sustainability standards.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="csr-card card border-0 shadow-sm h-100 text-center p-3">
-            <div class="csr-icon fs-1 mb-3">🍃</div>
-            <h5 class="csr-card-title  fw-bold">Green Tourism</h5>
-            <p class="csr-card-text text-muted small">
-              Advocating eco-friendly travel and green infrastructure at all engaged tourism sites.
-            </p>
-          </div>
-        </div>
+  
 
         <div class="col-lg-3 col-md-6">
           <div class="csr-card card border-0 shadow-sm h-100 text-center p-3">
@@ -409,7 +258,7 @@
       <!-- Bottom Copyright Line -->
       <div class="row align-items-center text-center text-md-start">
         <div class="col-md-12 text-center ">
-          <p class="mb-0 small">Copyright © 2025 Zenithholidays.com All Rights Reserved</p>
+         <p class="mb-0 small">Copyright © 2026 Zenith Hospitality. All Rights Reserved.</p>
         </div>
 
       </div>
